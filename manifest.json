@@ -1,6 +1,6 @@
 {
     "name":"IPViewer",
-    "description":"IP and Location Viewer",
+    "description":"View the IP and the Server location of the webpage you visit.",
     "version":"1.0",
     "manifest_version":3,
     "action":{
