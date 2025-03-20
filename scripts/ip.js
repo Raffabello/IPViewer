@@ -1,5 +1,5 @@
 function getIp(webpageURL){
-    const url = new URL(webpageURL);
+    const url = new URL(webpageURL); 
     const host = url.host;
     const apiUrl = "https://dns.google/resolve?name=" + host; //webpageURL should be without hypertext based info 
     return new Promise((resolve,reject) => {
