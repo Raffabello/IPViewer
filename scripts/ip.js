@@ -1,15 +1,28 @@
-function getIp(){
-    let hostName = location.host;
-    const apiUrl = "https://dns.google/resolve?name=" + hostName;
+function getIp(webpageURL){
+    const apiUrl = "https://dns.google/resolve?name=" + webpageURL; //webpageURL should be without hypertext based info 
     return new Promise((resolve,reject) => {
         const xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function(){
             if(xhttp.readyState === xhttp.DONE){
                 if(xhttp.status === 200){
-                    const ip = JSON.parse(xhttp.response).Answer[0].data;
-                    resolve(ip);
+                    const response = JSON.parse(xhttp.response);
+                    let status = response["Status"];
+                    if(status === 0 && response.hasOwnProperty("Answer")){ //Means we got the data from the API
+                        //Ip can have multiple IPs so take one => take the first one
+                        let ip = response["Answer"][0]["data"];
+                        //Make sure the IP is iPv4
+                        const ipv4regexp = /^(\d{1,3}\.){3}\d{1,3}$/
+                        if(ipv4regexp.test(ip)){
+                            resolve(ip);
+                        }else{
+                            reject("not_a_valid_ipv4_address");
+                        }
+                    }
+                    else{
+                        reject("other_dns_status_code");
+                    }
                 }else{
-                    reject("could not retrieve")
+                    reject("other_response_code")
                 }
             }
         }
