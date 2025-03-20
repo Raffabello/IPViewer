@@ -1,5 +1,7 @@
 function getIp(webpageURL){
-    const apiUrl = "https://dns.google/resolve?name=" + webpageURL; //webpageURL should be without hypertext based info 
+    const url = new URL(webpageURL);
+    const host = url.host;
+    const apiUrl = "https://dns.google/resolve?name=" + host; //webpageURL should be without hypertext based info 
     return new Promise((resolve,reject) => {
         const xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function(){
