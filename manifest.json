@@ -3,6 +3,16 @@
     "description":"View the IP and the Server location of the webpage you visit.",
     "version":"1.0",
     "manifest_version":3,
+    "permissions": ["storage","tabs"],
+    "background":{
+        "service_workers":["background.js"]
+    },
+    "content_scripts":[
+        {
+            "js":["scripts/content_scripts/content.js"],
+            "matches":["https://*/*"]
+        }
+    ],
     "action":{
         "default_popup":"./frontend/popup.html"
     }
