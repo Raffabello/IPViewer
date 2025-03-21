@@ -2,15 +2,17 @@
 <html>
     <link rel="stylesheet" href="./popup.css"/>
     <body>
+        <div class="popup-header">IP Viewer</div>
         <div class="popup-frame">
-            <div class="popup-header">IP Viewer</div>
             <div class="popup-body">
-                <div class="ip-viewer">IP Test</div>
-                <div class="location-viewer">Loc Test</div>
-            </div>
-            <div class="popup-footer">
-                <a href="https://github.com/Raffabello">Developed by Raffabello</a>
+                <div id="ip-viewer"><div class="loading"></div></div>
+                <div id="location-viewer"><div class="loading"></div></div>
             </div>
         </div>
+        <div class="popup-footer">
+            <a href="https://github.com/Raffabello">Developed by Raffabello</a>
+        </div>
     </body>
+    <script src="popup.js"></script>
+    <script src="../scripts/ip.js"></script>
 </html>

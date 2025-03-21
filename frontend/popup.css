@@ -1,4 +1,55 @@
-.popup-frame{
+body{
+    display:flex;
+    flex-direction: column;
     height:150px;
     width:250px;
+    padding:15px;
+    border:1px solid black;
+}
+.popup-frame{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    
+    height:100%;
+}
+
+.popup-body{
+    display:flex;
+    justify-content: space-between;
+    height:40%;
+}
+
+#ip-viewer{
+    display:flex;
+    width:40%;
+    justify-content:center;
+    align-items: center;
+    border:1px solid blue;
+}
+
+#location-viewer{
+    display:flex;
+    width:40%;
+    justify-content:center;
+    align-items: center;
+    border:1px solid blue;
+}
+
+@keyframes spinning{
+    0%{transform:rotate(0deg)}
+    100%{transform:rotate(360deg)}
+}
+
+.loading{
+    height:15px;
+    width:15px;
+
+    border-radius: 100%;
+    border-top:5px solid gainsboro;
+    border-left:5px solid gainsboro;
+    border-right:5px solid gainsboro;
+    border-bottom:5px solid blue;
+
+    animation:spinning .6s ease infinite;
 }
