@@ -49,13 +49,14 @@ body{
     justify-content: center;
     height:100%;
 
-    padding-bottom:15px;
+    padding-bottom:10px;
     border-bottom:1px solid gainsboro;
 }
 
 .popup-body{
     display:flex;
     justify-content: space-between;
+    gap:10px;
     height:40%;
 }
 
@@ -94,4 +95,14 @@ body{
     border-bottom:3px solid blue;
 
     animation:spinning .6s ease infinite;
+}
+
+#error-message-box{
+    display:flex;
+    margin-top:5px;
+    justify-content: center;
+}
+
+#error-message-label{
+    color:red;
 }
