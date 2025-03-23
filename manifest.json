@@ -4,15 +4,6 @@
     "version":"1.0",
     "manifest_version":3,
     "permissions": ["storage","tabs"],
-    "background":{
-        "service_worker":"background.js"
-    },
-    "content_scripts":[
-        {
-            "js":["scripts/content_scripts/content.js"],
-            "matches":["https://*/*"]
-        }
-    ],
     "action":{
         "default_popup":"./frontend/popup.html",
         "default_icon":{
