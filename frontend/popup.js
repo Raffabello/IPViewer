@@ -1,5 +1,6 @@
-let ipViewer = document.getElementById("ip-viewer");
-let locViewer = document.getElementById("location-viewer");
+let ipViewer = document.querySelector(".ip-viewer-label");
+let locViewer = document.querySelector(".ip-location-label");
+
 chrome.tabs.query({active:true, currentWindow:true}, function(activeTab){
     if(activeTab){
         let tabURL = activeTab[0].url;
@@ -14,4 +15,8 @@ chrome.tabs.query({active:true, currentWindow:true}, function(activeTab){
     }else{
         console.log("no tab")
     }
+})
+
+document.getElementById("developer").addEventListener("click", function(){
+    chrome.tabs.create({url:"https://github.com/Raffabello"})
 })
