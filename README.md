@@ -1,5 +1,5 @@
 # IPViewer
-A simple Chrome Extension that shows the IPv4 Address and the remote server of a webpage you are visiting. 
+A simple Chrome Extension that shows the <b>IPv4 Address</b> and the remote server <b>location</b> of a webpage you are visiting. 
 
 # Instructions
 Since it is not available on Google Store, you will need to clone the project and install it by yourself through the unpacked extension button in the Google Chrome Extension Manager
@@ -19,4 +19,4 @@ Load the Chrome extension. Surf any webpage, click on the extension icon, and yo
 # Notes
 
 It is a simple application that I developed for fun and to learn about Chrome Extensions. It serves more as a project for personal development than something that the public would find helpful.
-Yet, it is a great tool to get these two values easily without bothering to check the Server Response headers or go through APIs.
+Yet, it is a great tool to get IP and Location, easily without bothering to check the Server Response headers or go through APIs.
