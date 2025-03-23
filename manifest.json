@@ -5,7 +5,7 @@
     "manifest_version":3,
     "permissions": ["storage","tabs"],
     "background":{
-        "service_workers":["background.js"]
+        "service_worker":"background.js"
     },
     "content_scripts":[
         {
@@ -14,6 +14,9 @@
         }
     ],
     "action":{
-        "default_popup":"./frontend/popup.html"
+        "default_popup":"./frontend/popup.html",
+        "default_icon":{
+            "128":"./icons/IPViewerLogoTest1.png"
+        }
     }
 }
