@@ -1,17 +1,56 @@
+@font-face {
+    font-family: roboto;
+    src: url("../font/Roboto-Regular.ttf");
+
+    font-family: opensans;
+    src:url("../font/OpenSans-VariableFont_wdth\,wght.ttf")
+}
+
 body{
+    font-family: opensans;
     display:flex;
     flex-direction: column;
-    height:150px;
+    padding:10px 20px;
+    gap:15px;
+    height:fit-content;
     width:250px;
-    padding:15px;
-    border:1px solid black;
 }
+
+.popup-header{
+    display:flex;
+    padding-bottom:10px;
+    justify-content: space-between;
+    font-size:1.5rem;
+    border-bottom:1px solid gainsboro;
+}
+
+#developer{
+    font-size:0.6rem;
+    display:flex;
+    background:rgb(48,48,48);
+    color:white;
+    width:fit-content;
+
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+
+    padding:3px 6px;
+    border-radius:10px;
+    box-shadow:2px 2px 5px rgb(0, 0, 0, 0.3);
+
+    user-select: none;
+    cursor:pointer;
+}
+
 .popup-frame{
     display:flex;
     flex-direction:column;
     justify-content: center;
-    
     height:100%;
+
+    padding-bottom:15px;
+    border-bottom:1px solid gainsboro;
 }
 
 .popup-body{
@@ -21,19 +60,21 @@ body{
 }
 
 #ip-viewer{
-    display:flex;
-    width:40%;
-    justify-content:center;
+    display:grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr;
     align-items: center;
-    border:1px solid blue;
+    width:40%;
+    gap:10px;
 }
 
 #location-viewer{
-    display:flex;
-    width:40%;
-    justify-content:center;
+    display:grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr;
     align-items: center;
-    border:1px solid blue;
+    width:40%;
+    gap:10px;
 }
 
 @keyframes spinning{
@@ -42,14 +83,15 @@ body{
 }
 
 .loading{
-    height:15px;
-    width:15px;
+    justify-self: center;
+    height:12px;
+    width:12px;
 
     border-radius: 100%;
-    border-top:5px solid gainsboro;
-    border-left:5px solid gainsboro;
-    border-right:5px solid gainsboro;
-    border-bottom:5px solid blue;
+    border-top:3px solid gainsboro;
+    border-left:3px solid gainsboro;
+    border-right:3px solid gainsboro;
+    border-bottom:3px solid blue;
 
     animation:spinning .6s ease infinite;
 }
